@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>Hello World!</title>
+    <!-- <script type="text/javascript" src="helloworld.js" /> -->
+  </head>
+  <body>
+   <p id="paragraph">Hi!</p> 
+       <script type="text/javascript">
+      alert("hello world");
+
+      var elem = document.getElementById("paragraph");
+      elem.onclick = function() { elem.textContent = "paragraph clicked" }
+      elem.textContent = "New hello World!!"
+    </script>
+
+  </body>
+</html>
