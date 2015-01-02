@@ -1,0 +1,9 @@
+h1 {
+    color: orange;
+    text-align: center;
+}
+
+table, td, tr {
+  border-spacing: 10px;
+  border: 1px solid blue;
+}

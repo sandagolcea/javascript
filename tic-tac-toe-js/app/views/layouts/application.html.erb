@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Js</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <%= javascript_include_tag 'tic-tac-toe' => true %>
+  <%= stylesheet_link_tag    'tic-tac-toe' => true %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>
