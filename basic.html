@@ -5,35 +5,81 @@
   <title>Document</title>
 </head>
 <body>
-  <p>File for playing with js.</p>
-
+  <p>File for playing with html & js.</p>
+  
+  <!-- Text box -->
   <form id="holder">
+
     <div>
       <label for="1rst-number">Give a number:</label>
       <input type=text id="1rst-number" name="nr" size="3" placeholder="0">
     </div>
+
+    <div>
+      <label for="2nd-number">Give another number:</label>
+      <input type=text id="2nd-number" size="3" placeholder="0">
+    </div>
+
+    <!-- Dropdown list -->
+    <div>
+      <label for="side">Which side are you on?</label>
+      <select id="side">
+          <option value="dark">The dark side</option>
+          <option value="bright">The bright side</option>
+      </select>
+    </div>
+    
+    <!-- Radio buttons -->
+    <div class="radio_candy">
+        <label for="candy">Do you want candy?</label><br>
+        <input type="radio" name="candy" id="y_candy" value="yes">Yes<br>
+        <input type="radio" name="candy" id="n_candy" value="no">No<br>
+        <input type="radio" name="candy" id="m_candy" value="maybe">Maybe
+    </div>
+
+    <!-- Check boxes -->
+    <div>
+      <label for="sweets">What would you like?</label><br>
+      <input type="checkbox" name="sweets" value="chocolate">Chocolate<br>
+      <input type="checkbox" name="sweets" value="caramel">Caramel<br> 
+      <input type="checkbox" name="sweets" value="ice-cream">Ice Cream 
+    </div>
+    
+    <!-- Submit button -->
+    <div>
+      <input type="submit" value="Submit">
+    </div>
+
   </form>
 
-  <div>
-    <label for="2nd-number">Give another number:</label>
-    <input type=text id="2nd-number" size="3" placeholder="0">
-  </div>
-
-  <div>
-    <label for="side">Which side are you on?</label>
-    <select id="side">
-        <option value="dark">The dark side</option>
-        <option value="bright">The bright side</option>
-    </select>
-  </div>
-
-
   <script type="text/javascript">
-    console.log("Insider message.");
+    console.log("Hope you're having a wonderful day :)");
 
+    // Get the value from a text box
     document.getElementById('1rst-number').value;
+    
+    // Get a value from the dropdown list
     document.getElementById('side').value;
     
+    // Get an answer from the radio buttons
+    var answers = document.getElementById('holder').candy
+    for ( i=0; i < answers.length; i++) {
+      if( answers[i].checked == true ) alert(answers[i].value);
+    }
+
+    //See if a value is checked from the check boxes
+    var sweet_list = document.getElementsByName('sweets')
+    for ( i=0; i < sweet_list.length; i++) {
+      if( sweet_list[i].checked == true ) alert(sweet_list[i].value);
+    }
+
+    document.getElementById('holder').addEventListener('submit', calculateTotal);
+    
+    function calculateTotal(event) {
+      event.preventDefault();
+      console.log("Got to calculate the total");
+    };
+
   </script>
 
 </body>
