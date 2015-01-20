@@ -20,3 +20,7 @@ RockPaperScissors.prototype.scissors_versus = function(choice){
   }
   return false;
 };
+
+RockPaperScissors.randomChoice = function(){
+  return("rock");
+};
