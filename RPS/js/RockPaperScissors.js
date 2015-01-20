@@ -22,5 +22,11 @@ RockPaperScissors.prototype.scissors_versus = function(choice){
 };
 
 RockPaperScissors.randomChoice = function(){
-  return("rock");
+  var choice = Math.random();
+  if (choice <= 0.3)
+    return("rock");
+  else if (choice > 0.3 && choice < 0.6) 
+    return("scissors");
+  else 
+    return("paper");
 };

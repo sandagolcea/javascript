@@ -34,7 +34,19 @@ describe("Rock Paper Scissors", function() {
       expect(rps.scissors_versus("rock")).toBe(false);
     });
 
+  });
 
+  describe("can get a random choice", function(){
+    it("from values rock paper and scissors", function(){
+      var choiceArray = ["rock","paper","scissors"];
+      expect(choiceArray).toContain(RockPaperScissors.randomChoice());
+    });
+
+    it("only in the range rock paper scissors", function(){
+      // var choiceArray = ["rock","paper","scissors"];
+      var choiceArray=["ping","pong"];
+      expect(choiceArray).not.toContain(RockPaperScissors.randomChoice());
+    });
   });
 
 });
