@@ -1,5 +1,5 @@
 
-#circle {
+.circle {
 
     position: absolute;
     left: 50%;
@@ -12,7 +12,16 @@
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
     border-radius: 50%; 
-    background-color: blue;
+}
+
+#low-usage {
+  background-color: blue;
+}
+#medium-usage {
+  background-color: yellow;
+}
+#high-usage {
+  background-color: red;
 }
 
 #arrow-up {
@@ -39,6 +48,7 @@
   top: 75%;
   left: 15%;
 }
+
 
 #temperature-text {
   position: relative;

@@ -70,4 +70,34 @@ describe("when power saving mode is on", function(){
 
   });
 
+
+  describe("depending on temperature", function(){
+    it("should be on low usage under 18 ", function(){
+      thermostat.decreaseTemperature(4);
+      expect(thermostat.powerUsage()).toBe('low-usage');
+    });
+
+    it("should be on medium usage under 25 ", function(){
+      thermostat.increaseTemperature(4);
+      expect(thermostat.powerUsage()).toBe('medium-usage');
+    });
+
+    it("should be on high usage over 25", function(){
+      thermostat.increaseTemperature(10);
+      expect(thermostat.powerUsage()).toEqual('high-usage');
+    });
+
+  });
+
 });
+
+
+
+
+
+
+
+
+
+
+
