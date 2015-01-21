@@ -1,11 +1,17 @@
 
 #circle {
 
-    width: 200px;
-    height: 200px;
+    position: absolute;
+    left: 50%;
+
+    width: 500px;
+    height: 500px;
+    /*position: relative;*/
+    margin: 1em auto;
+
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
-    border-radius: 100px; 
+    border-radius: 50%; 
     background-color: blue;
 }
 
@@ -13,26 +19,33 @@
 
   width: 0; 
   height: 0; 
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  
-  
-  border-bottom: 20px solid black;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 40px solid black;
+
+  position: relative;
+  top: 15%;
+  left: 40%;
 }
 
 #arrow-down {
   width: 0; 
   height: 0; 
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 40px solid black;
   
-  border-top: 20px solid black;
+  position: relative;
+  top: 75%;
+  left: 15%;
 }
 
-.main {
-  width: 700px ;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center; 
+#temperature-text {
+  position: relative;
+  top: 45%;
+  left: 25%;
+  font-size: 40px;
 }
+
+
+
