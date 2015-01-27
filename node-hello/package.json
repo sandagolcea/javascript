@@ -1,0 +1,12 @@
+{
+  "name": "node-hello-world",
+  "scripts": {
+    "start": "server.js"
+  },
+  "main" : "./server.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "version": "0.0.0"
+}
