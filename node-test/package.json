@@ -1,0 +1,11 @@
+{
+  "name": "play",
+  "version": "1.0.0",
+  "description": "playing with node",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine-node spec/ --verbose"
+  },
+  "author": "",
+  "license": "ISC"
+}

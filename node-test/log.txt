@@ -1,0 +1,500 @@
+  228  bundle install
+  229  rspec
+  230  rackup
+  231  rackup
+  232  rackup
+  233  rake auto_migrate
+  234  rackup
+  235  rake auto_migrate
+  236  rackup
+  237  rackup
+  238  rake auto_migrate
+  239  rackup
+  240  rspec
+  241  rackup
+  242  rackup
+  243  ls
+  244  rspec
+  245  rspec
+  246  rspec
+  247  rspec
+  248  rspec
+  249  rspec
+  250  rspec
+  251  rspec
+  252  rspec
+  253  rspec
+  254  rspec
+  255  rspec
+  256  rspec
+  257  rspec
+  258  rspec
+  259  rspec
+  260  rspec
+  261  rspec
+  262  rspec
+  263  git add -u
+  264  rackup
+  265  rackup
+  266  rackup
+  267  rackup
+  268  rspec
+  269  rspec
+  270  rspec
+  271  rackup
+  272  rspec
+  273  rspec
+  274  rackup
+  275  rackup
+  276  rspec
+  277  rspec
+  278  rackup
+  279  git status
+  280  git add -u
+  281  git status
+  282  git commit -m "Refactor and sign in improved"
+  283  git push
+  284  rackup
+  285  git status
+  286  git add .
+  287  git status
+  288  git commit -m "Adds timestamp"
+  289  git push
+  290  rspec
+  291  quit
+  292  quit
+  293  exit
+  294  quit
+  295  exit
+  296  '/Applications/Postgres.app/Contents/Versions/9.3/bin'/psql -p5432
+  297  quit
+  298  exit
+  299  '/Applications/Postgres.app/Contents/Versions/9.3/bin'/psql -p5432
+  300  exit
+  301  '/Applications/Postgres.app/Contents/Versions/9.3/bin'/psql -p5432
+  302  exit
+  303  ls
+  304  cd ..
+  305  ls
+  306  cd sandagolcea/
+  307  ls
+  308  cd dev/
+  309  ls
+  310  ll
+  311  cd chitter/
+  312  ls
+  313  cd lib/
+  314  ls
+  315  ls
+  316  cd ..
+  317  ls
+  318  sublime .
+  319  rackup
+  320  ls
+  321  git status
+  322  git checkout -- *
+  323  git status
+  324  rackup
+  325  ls
+  326  rake auto_migrate
+  327  rake auto_migrate
+  328  rackup
+  329  ls
+  330  mkdir public
+  331  mkdir public/stylesheets
+  332  touch public/stylesheets/normalize.css
+  333  touch public/stylesheets/style.css
+  334  ls
+  335  tree
+  336  sublime .
+  337  rackup
+  338  rackup
+  339  ls
+  340  ls
+  341  ls public/
+  342  ls
+  343  ls public/stylesheets/
+  344  mv public/stylesheets/normalize.css  public/normalize.css
+  345  ls
+  346  mv public/stylesheets/style.css public/style.css
+  347  rackup
+  348  ls
+  349  ls public/
+  350  cd lib/
+  351  ls
+  352  ls public/
+  353  l
+  354  ls
+  355  ls public/
+  356  ls public/stylesheets/
+  357  ls
+  358  rm -rf public/
+  359  ls
+  360  cd ..
+  361  ls
+  362  cd lib/
+  363  ls
+  364  cd ..
+  365  ls
+  366  rackup
+  367  sublime .
+  368  cd ..
+  369  ls
+  370  cd tic-tac-toe-web/
+  371  sublime .
+  372  cd ..
+  373  ls
+  374  cd chitter/
+  375  sublime .
+  376  sublime .
+  377  gem install factory_girl
+  378  ls
+  379  cd ..
+  380  ls
+  381  cd tic-tac-toe-web/
+  382  ls
+  383  rackup
+  384  ls
+  385  cd lib/
+  386  ls
+  387  sublime .
+  388  cd ..
+  389  ls
+  390  cd Gemfile
+  391  sublime Gemfile
+  392  rackup
+  393  cd ..
+  394  ls
+  395  mkdir rock-paper-scissors-js
+  396  cd rock-paper-scissors-js/
+  397  ls
+  398  touch ruby.rb
+  399  touch js.js
+  400  sublime .
+  401  jsc
+  402  cd ~
+  403  ls
+  404  sublime .bash_profile 
+  405  ln -s /System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc /usr/local/bin/jsc
+  406  jsc
+  407  cat .bash_profile 
+  408  la
+  409  ls
+  410  '/Applications/Postgres.app/Contents/Versions/9.3/bin'/psql -p5432
+  411  ll
+  412  cd ..
+  413  ls
+  414  git clone git@github.com:sandagolcea/bowling.git
+  415  ll
+  416  cd bowling/
+  417  ls
+  418  sublime .
+  419  sublime .
+  420  cd ..
+  421  ll
+  422  git clone git@github.com:jindai1783/Makerland.git
+  423  cd Makerland/
+  424  ls
+  425  cd ..
+  426  ls
+  427  mv Makerland/ Makerland1/
+  428  git@github.com:jindai1783/Makerland.git
+  429  git clone git@github.com:jindai1783/Makerland.git
+  430  cd Makerland
+  431  ls
+  432  ll
+  433  open index.html 
+  434  cd ..
+  435  ls
+  436  rm -rf Makerland
+  437  mv Makerland1/ Makerland/
+  438  ll
+  439  git clone git@github.com:jindai1783/Map.git
+  440  cd Ma
+  441  ll
+  442  cd Map/
+  443  ls
+  444  open index.html 
+  445  open demo1.html
+  446  cd ..
+  447  ls
+  448  ll
+  449  rm .DS_Store 
+  450  ll
+  451  cd Makerland/
+  452  ll
+  453  cd mapination/
+  454  git status
+  455  git log --oneline
+  456  ll
+  457  cd ..
+  458  ls
+  459  cd ..
+  460  ls
+  461  cd mapi
+  462  cd Makerland/
+  463  cd mapination/
+  464  ls
+  465  open index.html 
+  466  open .
+  467  ls
+  468  cat index.html 
+  469  ls
+  470  cd map.js 
+  471  open map.js
+  472  sublime map
+  473  sublime map.js
+  474  ls
+  475  sublime mapAction.js 
+  476  open index.html 
+  477  open index.html 
+  478  open index.html 
+  479  git status
+  480  git add .
+  481  git commit -m "Added mouseout and cleaned up map a bit"
+  482  git push
+  483  git pull
+  484  git push
+  485  ll
+  486  open index.html 
+  487  open index.html 
+  488  ll
+  489  git status
+  490  git add .
+  491  git commit -m "clears up the map a bit"
+  492  git push
+  493  cd ..
+  494  ls
+  495  cd ..
+  496  ls
+  497  cd bowling/
+  498  ll
+  499  quit
+  500  exit
+  501  ll
+  502  cd ..
+  503  ls
+  504  cd sanda
+  505  cd sandagolcea/
+  506  lll
+  507  ll
+  508  cd dev/
+  509  ll
+  510  cd javascript-practice/
+  511  ll
+  512  cd ..
+  513  ls
+  514  cp javascript-practice/jasmineFiles/* bowling/
+  515  ls bowling/
+  516  cp javascript-practice/jasmineFiles/lib bowling/lib
+  517  cp -r javascript-practice/jasmineFiles/lib bowling/lib
+  518  cp -r javascript-practice/jasmineFiles/spec bowling/spec
+  519  ls javascript-practice/jasmineFiles/src/
+  520  cp -r javascript-practice/jasmineFiles/src bowling/src
+  521  cd bowling/
+  522  ll
+  523  ls lib/
+  524  ls src/
+  525  ls spec/
+  526  rm MIT.LICENSE 
+  527  ll
+  528  open SpecRunner.html 
+  529  sublime .
+  530  open SpecRunner.html 
+  531  open SpecRunner.html 
+  532  open SpecRunner.html 
+  533  open SpecRunner.html 
+  534  open SpecRunner.html 
+  535  open SpecRunner.html 
+  536  open SpecRunner.html 
+  537  open SpecRunner.html 
+  538  open SpecRunner.html 
+  539  open SpecRunner.html 
+  540  open SpecRunner.html 
+  541  open SpecRunner.html 
+  542  open SpecRunner.html 
+  543  ls
+  544  cd ..
+  545  ls
+  546  ja
+  547  javascript-practice/
+  548  ll
+  549  cd ..
+  550  ls
+  551  cd dev/
+  552  ls
+  553  cd bowling/
+  554  ll
+  555  open SpecRunner.html 
+  556  jsc
+  557  ll
+  558  jsc
+  559  open SpecRunner.html 
+  560  open SpecRunner.html 
+  561  git status
+  562* git commit -m "Adds first tests"
+  563  git status
+  564  git commit -m "Adds first tests"
+  565  git status
+  566  git push
+  567  ll
+  568  ls js
+  569  rm js/Song.js
+  570  rm js/Player.js 
+  571  ls
+  572  ls spec/
+  573  rm spec/PlayerSpec.js 
+  574  cat SpecRunner.html 
+  575  ll
+  576  ls js/
+  577  ls
+  578  open SpecRunner.html 
+  579  git status
+  580  git add -u
+  581  git status
+  582  git add -m "first cleansing"
+  583  git commit -m "first cleansing"
+  584  jsc
+  585  ll
+  586  open .
+  587  ll
+  588  sublime .
+  589  open SpecRunner.html 
+  590  git status
+  591  git add -u
+  592  git status
+  593  git add js/
+  594  git add spec/
+  595  ll
+  596  git status
+  597  git commit -m "renames ScoreBoard to game, uses a frames hash"
+  598  git push
+  599  ll
+  600  open SpecRunner.html 
+  601  git status
+  602  git add -u
+  603  git status
+  604  git commit -m "Adds roll tests"
+  605  git add .
+  606  git status
+  607  git commit -m "Adds frame nr, rolls left and frame total with tests"
+  608  git push
+  609  git status
+  610  ll
+  611  open SpecRunner.html 
+  612  git status
+  613  git diff
+  614  git add .
+  615  git status
+  616  git commit -m "Adds total game points"
+  617  git push
+  618  git status
+  619  git diff --color-words
+  620  git status
+  621  git add .
+  622  git commit -m "Small refractor and strike adition"
+  623  git push
+  624  open SpecRunner.html 
+  625  ls
+  626  mkdir images
+  627  cd images/
+  628  curl -o pinsPic.png http://images.clipartpanda.com/bowling-20clip-20art-bowling_pins.png
+  629  curl -o pinLayout.png http://www.clker.com/cliparts/K/S/o/u/O/6/bowling-pin-layout-md.png
+  630  cd ..
+  631  ls
+  632  cd ..
+  633  ls
+  634  wait for it
+  635  cd bootStrapTut/
+  636  ll
+  637  open open 02_02.html 
+  638  open 02_02.html 
+  639  ll
+  640  sublime .
+  641  sublime .
+  642  open 02_04.html 
+  643  open 02_05.html 
+  644  pu .
+  645  pu .
+  646  pu .
+  647  cd ..
+  648  ls
+  649  cd Makerland/
+  650  ll
+  651  cd mapination/
+  652  ls
+  653  open index.html 
+  654  po
+  655  ll
+  656  open 02_05.html 
+  657  open 02_06.html 
+  658  cd ..
+  659  ls
+  660  curl -o ptolemy.png http://upload.wikimedia.org/wikipedia/commons/0/0b/PSM_V78_D326_Ptolemy.png
+  661  ll
+  662  sublime ptolemy.png 
+  663  rm ptolemy.png 
+  664  cd javascript-practice/
+  665  ll
+  666  rm .DS_Store 
+  667  cd basic-js/
+  668  ;s
+  669  ll
+  670  cd ..
+  671  ls
+  672  cd basic-js/
+  673  ls
+  674  cat basic.html 
+  675  ll
+  676  cd ..
+  677  ls
+  678  cd ..
+  679  ls
+  680  cd Makerland/
+  681  ls
+  682  cd map
+  683  cd mapination/
+  684  ls
+  685  open index.html 
+  686  cat mapAction.js 
+  687  node -v
+  688  cd ..
+  689  ls
+  690  cd ..
+  691  ls
+  692   cd javascript-practice/
+  693  mkdir jasmine-node-test
+  694  cd jasmine-node-test/
+  695  npm init
+  696  ll
+  697  ls node_modules/
+  698  ls node_modules/jasmine-node/
+  699  npm install jasmine-node -g
+  700  sudo npm install jasmine-node -g
+  701  ll
+  702  jsc
+  703  node
+  704  history
+  705  tree -a
+  706  ls
+  707  cd ..
+  708  ls
+  709  rm -rf jasmine-node-test/
+  710  ll
+  711  mkdir node-test
+  712  cd node-test/
+  713  ls
+  714  npm init
+  715  ll
+  716  tree
+  717  npm install --save-dev jasmine-n
+  718  ls
+  719  touch .gitignore
+  720  echo "node_modules" >> .gitignore
+  721  ll
+  722  tree
+  723  vi package.json 
+  724  mkdir spec
+  725  npm test
+  726  history
+  727  history > log.txt
