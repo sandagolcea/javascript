@@ -27,3 +27,15 @@ Node related exercises
 ###Others
 Names are self explanatory, implementation in js:
 FizzBuzz, TicTacToe, simple Thermostat (the complete version is on Ptolemy's github)
+
+##Resources For Node.js
+* Soup to Bits: https://www.codeschool.com/screencasts/soup-to-bits-real-time-web-with-node-js
+* NodeJS API Docs: http://nodejs.org/api/
+* npm registry: https://www.npmjs.org/
+* HowtoNode: http://howtonode.org/
+* Stream Handbook: https://github.com/substack/stream-handbook
+* The Little Redis Book: http://openmymind.net/2012/1/23/The-Little-Redis-Book/
+* Socket.io: http://socket.io/docs/
+* Express 4 API: http://expressjs.com/4x/api.html
+* NodeUP Podcast: http://nodeup.com/
+* Code School Forum http://discuss.codeschool.io/category/javascript/node-js

@@ -1,0 +1,38 @@
+div {
+    height:100px;
+    width:100px;
+    background-color:#FF0000;
+    border-radius:5px;
+}
+/**************************
+         Squares
+**************************/
+#green {
+    background-color:#008800;
+}
+
+#ready {
+    background-color:#008800;
+    color:#FFFFFF;
+}
+
+#notready {
+    background-color:#FF0000;
+    color:#FFFFFF;
+}
+
+#blue {
+    background-color:#000088;
+    display: none;
+}
+
+#button {
+    height: 60px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #69D2E7;
+    text-align: center;
+    color: #FFFFFF;
+    font-family: Verdana, Arial, Sans-Serif;
+    opacity: 0.5;
+}
