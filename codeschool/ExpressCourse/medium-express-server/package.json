@@ -1,0 +1,19 @@
+{
+  "name": "medium-express-server",
+  "version": "1.0.0",
+  "description": "2nd express playground",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "js"
+  ],
+  "author": "Sanda Golcea",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.11.2"
+  }
+}

@@ -1,0 +1,11 @@
+body {
+  background-image: url("skyline.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: blue;
+}
+
+img {
+  height: 50px;
+  width: 50px;
+}
