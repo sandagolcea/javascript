@@ -1,3 +1,7 @@
+html {
+  text-align: center;
+}
+
 body {
   background-image: url("skyline.png");
   background-size: 100%;
@@ -5,7 +9,13 @@ body {
   background-color: blue;
 }
 
+.city-list {
+  list-style-type: none;
+  background-color: white;
+}
+
 img {
-  height: 50px;
-  width: 50px;
+  height: 100px;
+  width: 100px;
+  padding: 5px;
 }
