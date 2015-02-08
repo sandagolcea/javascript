@@ -6,11 +6,15 @@ $(document).ready( function(){
     var photos=[];
 
     for (var i in cities) {
-      list.push( $('<li>', { text: cities[i] } ) );
+      // with list approach
+      // list.push( $('<li>', { text: cities[i] } ) );
+      list.push( $('<li>', { text: i } ) );
     }
 
     for (var i in cities) {
-      photos.push( $('<img>', { src: 'http://'+cities[i]+'.jpg.to' , alt: cities[i] } ) );
+      // with list approach
+      // photos.push( $('<img>', { src: 'http://'+cities[i]+'.jpg.to' , alt: cities[i] } ) );
+      photos.push( $('<img>', { src: 'http://'+i+'.jpg.to' , alt: cities[i] } ) );
     }
     
     $('.city-list').append(list);
