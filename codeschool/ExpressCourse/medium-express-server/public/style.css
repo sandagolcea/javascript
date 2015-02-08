@@ -2,20 +2,35 @@ html {
   text-align: center;
 }
 
+/***********************
+    Main html parts
+***********************/
+
+h1 {
+  color: white;
+}
+
 body {
   background-image: url("skyline.png");
   background-size: 100%;
-  background-repeat: no-repeat;
   background-color: blue;
 }
+/***********************
+    Image handling
+***********************/
+img {
+  height: 150px;
+  width: 150px;
+  padding: 5px;
+  border-radius: 10%;
+}
 
+/***********************
+  City list elements
+***********************/
 .city-list {
   list-style-type: none;
   background-color: white;
-}
-
-img {
-  height: 100px;
-  width: 100px;
-  padding: 5px;
+  color: #5599FF;
+  padding: 2px;
 }

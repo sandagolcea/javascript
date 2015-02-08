@@ -12,7 +12,7 @@ app.get('/', function(request, response){
 });
 
 app.get('/cities', function(request, response){
-  var cities = ['Shanghai','Paris','Rome','Berlin'];
+  var cities = ['London','Paris','Rome','Barcelona','Venice','Disneyland'];
   response.json(cities);
 });
 
