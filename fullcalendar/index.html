@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
+  <script src='lib/jquery.min.js'></script>
+  <script src='lib/moment.min.js'></script>
+  <script src='fullcalendar/fullcalendar.js'></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+
+        $('#calendar').fullCalendar({
+            dayClick: function() {
+                alert('a day has been clicked!');
+            }
+        });
+
+    });
+  </script>
+</head>
+<body>
+  hi
+  <div id='calendar'></div>
+</body>
+</html>
