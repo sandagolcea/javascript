@@ -3,11 +3,13 @@
 <head>
   <link rel='stylesheet' type='text/css' href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 </head>
-<body>
-  <section ng-controller='BookController as book'>
-    <h1>{{ book.product.title }}</h1>
-    <p> {{ book.product.description }}</p>
-    <h3> {{ book.product.author }}</h3>
+<body ng-controller='BookController as book'>
+  <section ng-repeat='product in book.products'>
+    <h1>{{ product.title }}</h1>
+    <p>{{ product.description }}</p>
+    <h3>{{ product.author }}</h3>
+    <button ng-show='products.read'> Review </button>
+  </section>
   <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js'></script>
   <script type='text/javascript' src='./app.js'></script>
 </body>
