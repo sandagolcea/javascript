@@ -12,13 +12,15 @@
                   description: 'Learn OOP the right way! Sandi Metz explains how to best behave when we write a program',
                   author: 'Sandi Metz',
                   read: false, 
+                  image: 'POODR.jpg'
                 },
 
                 {
                   title: 'Eloquent Javascript',
                   description: 'A modern introduction to programming in JavaScript',
                   author: 'Marijn Haverbeke',
-                  read: false, 
+                  read: true, 
+                  image: 'eloquent_javascript.png'
                 }
               ];
 
