@@ -4,3 +4,4 @@ twitter_not_working
 .env_for_twitter
 /data/db/*
 .DS_Store
+.meteor

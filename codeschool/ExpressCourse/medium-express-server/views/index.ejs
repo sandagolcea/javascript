@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>World Cities</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
   <h1>Cities</h1>
@@ -12,6 +12,13 @@
    <!-- Content served from /cities endpoint -->
   </ul>
   <p id="photos"></p>
+
+  <p>Add a New City</p>
+  <form>
+    <input name="name" placeholder="City" type="text">
+    <input name="country" placeholder="Country" type="text">
+    <input type="submit" value="Add"/>
+  </form>
 
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
   <script type="text/javascript" src="client.js"></script>

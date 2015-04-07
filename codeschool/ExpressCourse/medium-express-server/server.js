@@ -1,14 +1,14 @@
 var express = require('express');
 var app = express();
 
+var bodyParser = require('body-parser');
+var parseUrlencoded = bodyParser.urlencoded({extended: false});
+
 var logger = require('./logger.js');
 app.use(logger);
-
-app.use(express.static('public'));
+app.set('view engine','ejs');
+app.use(express.static(__dirname+'/public'));
   
-  // We changed the list of cities
-  // var cities = ['London','Paris','Rome','Barcelona','Venice','Disneyland'];
-  // into a cities object
   var cities = {
   'London': 'UK',
   'Paris': 'France',
@@ -19,7 +19,7 @@ app.use(express.static('public'));
 
 
 app.get('/', function(request, response){
-  response.sendFile(__dirname+'/index.html');
+  response.render('index');
 });
 
 app.get('/cities', function(request, response){
@@ -29,6 +29,15 @@ app.get('/cities', function(request, response){
   } else {
     response.json(cities);
   }
+});
+
+app.post('/cities', parseUrlencoded, function(request,response){
+  var newCity = request.body;
+  // console.log("New city is:"+newCity+" Name: "+newCity.name+" Country: "+newCity.country);
+  cities[newCity.name] = newCity.country;
+  console.log(cities);
+  response.status(201);
+  response.json(newCity.name);
 });
 
 app.get('/cities/:name', function(request, response){

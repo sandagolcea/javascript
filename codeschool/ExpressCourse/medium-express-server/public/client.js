@@ -1,14 +1,31 @@
 $(document).ready( function(){
+
   $.get('/cities', appendToList);
+
+  $('form').on('submit', function(event){
+
+    event.preventDefault();
+    var formData = $(this).serialize();
+    console.log("***form data: "+formData);
+
+    $.ajax({ type:'POST', url: '/cities', data: formData }).done(function(formData){
+      appendToList([formData]);
+      // clear form fields
+      $('form').trigger('reset');
+    });
+
+  });
 
   function appendToList(cities){
     var list=[];
     var photos=[];
+    console.log("***Data to append:"+cities);
 
-    for (var i in cities) {
+    for (var i=0; i<cities.length; i++) {
       // with list approach
       // list.push( $('<li>', { text: cities[i] } ) );
-      list.push( $('<li>', { text: i } ) );
+      console.log("***My data is: "+cities[i]);
+      list.push( $('<li>', { text: cities[i] } ) );
     }
 
     for (var i in cities) {
