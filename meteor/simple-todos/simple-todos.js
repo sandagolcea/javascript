@@ -6,6 +6,7 @@ if (Meteor.isClient) {
       return Tasks.find({}, {sort: {createdAt: -1}});
     }
   });
+
   Template.body.events({
     'submit .new-task': function(event) {
       var text = event.target.text.value;
@@ -15,6 +16,15 @@ if (Meteor.isClient) {
       });
       event.target.text.value = "";
       return false;
+    }
+  });
+
+  Template.task.events({
+    'click .toggle-checked': function() {
+      Tasks.update(this._id, {$set: {checked: ! this.checked}});
+    },
+    'click .delete': function() {
+      Tasks.remove(this._id);
     }
   });
 }

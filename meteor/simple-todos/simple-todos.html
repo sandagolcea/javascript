@@ -9,8 +9,7 @@
       <form class='new-task'>
         <input type="text" name='text' placeholder='New todo item..'>
       </form>
-    </header>
-  
+    </header> 
     <ul>
     {{#each tasks}}
       {{> task}}
@@ -20,5 +19,9 @@
 </body>
 
 <template name="task">
-  <li>{{text}}</li>
+  <li class='{{#if checked}}checked{{/if}}'>
+    <button class='delete'>&times;</button>
+    <input class='toggle-checked' type="checkbox" checked='{{checked}}' />
+    <span class='text'>{{text}}</span>
+  </li>
 </template>
