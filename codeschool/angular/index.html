@@ -1,27 +1,54 @@
 <!DOCTYPE html>
 <html ng-app='store'>
 <head>
-  <title>Angular start</title>
+  <title>Angular gem store</title>
   <!-- jQuery & Bootstrap -->
-  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+
+<body ng-controller='StoreController as store'>
   <div class='container'>
-    <h5>Your name here: <input type="text" ng-model="name" placeholder="name.."/></h5>
-    <p>Hello {{ name }}!</p>
-    <div ng-controller='StoreController as store'>
-      <div ng-hide='store.product.soldOut'>
-        <h3> {{store.product.name}} </h3>
-        <em class="pull-right"><h2> ${{store.product.price}} </h2></em>
-        <p> {{store.product.description}} </p>
-        <button ng-show='store.product.canPurchase'>Add to cart</button>
+  Filter: <input type="text" ng-model='searchText'>
+  <ul ng-repeat="product in store.products | filter:searchText | orderBy:'price'">
+    <li ng-hide='product.soldOut'>
+      <h3> {{product.name}} </h3>
+      <em class="pull-right"><h2> {{product.price | currency }} </h2></em>
+      <!-- Images -->
+      <div class="gallery" ng-show="product.images.length">
+        <img class="big-icon" ng-src="{{product.images[0]}}"/><br>
+        <ul class="thumbs" ng-repeat="image in product.images">
+          <li><img class="small-icon thumbnail" ng-src="{{image}}"></li>
+        </ul>
       </div>
-    </div>
+      <!-- Navigation tabs -->
+      <section ng-init="tab = 1">
+        <ul class="nav nav-pills">
+          <li ng-class="{active:tab === 1}"><a href ng-click="tab=1">Description</a></li>
+          <li ng-class="{active:tab === 2}"><a href ng-click="tab=2">Specifications</a></li>
+          <li ng-class="{active:tab === 3}"><a href ng-click="tab=3">Reviews</a></li>
+        </ul>
+        <div class="panel" ng-show="tab===1">
+          <h4>Description</h4>
+          <p>{{product.description}}</p>
+        </div>
+        <div class="panel" ng-show="tab===2">
+          <h4>Specification</h4>
+          <p>Specification to come soon..</p>
+        </div>
+        <div class="panel" ng-show="tab===3">
+          <h4>Reviews</h4>
+          <p>No reviews yet.</p>
+        </div>
+      </section>
+      <button ng-show='product.canPurchase'>Add to cart</button>
+    </li>
+  </ul>
   </div>
   <!-- Angular -->
-   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
   <script type="text/javascript" src='app.js'></script>
 </body>
 </html>

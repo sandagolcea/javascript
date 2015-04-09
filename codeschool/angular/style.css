@@ -1,0 +1,29 @@
+
+ul {
+  background-color: #DDD;
+  list-style-type: none;
+}
+
+.big-icon {
+  height: 120px;
+  width: 100px;
+  border: 1px solid black;
+  margin: 0 10px 0 0;
+}
+
+.small-icon {
+  height: 50px;
+  width: 50px;
+  border: 1px solid black; 
+}
+
+.thumbs li {
+  display: block;
+  float: right;
+  list-style-type: none;
+  margin: 0 10px 0 0;
+}
+
+.gallery {
+  text-align: center;
+}
