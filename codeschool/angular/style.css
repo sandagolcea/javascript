@@ -1,7 +1,10 @@
+body {
+  background-color: #DDD;
+}
 
 ul {
-  background-color: #DDD;
   list-style-type: none;
+  background-color: #FFF;
 }
 
 .big-icon {

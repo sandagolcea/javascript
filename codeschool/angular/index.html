@@ -17,28 +17,28 @@
       <h3> {{product.name}} </h3>
       <em class="pull-right"><h2> {{product.price | currency }} </h2></em>
       <!-- Images -->
-      <div class="gallery" ng-show="product.images.length">
-        <img class="big-icon" ng-src="{{product.images[0]}}"/><br>
+      <div class="gallery" ng-show="product.images.length" ng-controller="GalleryController as gallery">
+        <img class="big-icon" ng-src="{{product.images[gallery.current]}}"/><br>
         <ul class="thumbs" ng-repeat="image in product.images">
           <li><img class="small-icon thumbnail" ng-src="{{image}}"></li>
         </ul>
       </div>
       <!-- Navigation tabs -->
-      <section ng-init="tab = 1">
+      <section ng-controller="PanelController as panel">
         <ul class="nav nav-pills">
-          <li ng-class="{active:tab === 1}"><a href ng-click="tab=1">Description</a></li>
-          <li ng-class="{active:tab === 2}"><a href ng-click="tab=2">Specifications</a></li>
-          <li ng-class="{active:tab === 3}"><a href ng-click="tab=3">Reviews</a></li>
+          <li ng-class="{active:panel.isSelected(1)}"><a href ng-click="panel.selectTab(1)">Description</a></li>
+          <li ng-class="{active:panel.isSelected(2)}"><a href ng-click="panel.selectTab(2)">Specifications</a></li>
+          <li ng-class="{active:panel.isSelected(3)}"><a href ng-click="panel.selectTab(3)">Reviews</a></li>
         </ul>
-        <div class="panel" ng-show="tab===1">
+        <div class="panel" ng-show="panel.isSelected(1)">
           <h4>Description</h4>
           <p>{{product.description}}</p>
         </div>
-        <div class="panel" ng-show="tab===2">
+        <div class="panel" ng-show="panel.isSelected(2)">
           <h4>Specification</h4>
           <p>Specification to come soon..</p>
         </div>
-        <div class="panel" ng-show="tab===3">
+        <div class="panel" ng-show="panel.isSelected(3)">
           <h4>Reviews</h4>
           <p>No reviews yet.</p>
         </div>
