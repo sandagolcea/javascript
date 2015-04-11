@@ -23,6 +23,14 @@
     };
   });
 
+  app.controller('ReviewController', function () {
+    this.review = {};
+    this.addReview = function (product) {
+      product.reviews.push(this.review);
+      this.review = {};
+    };
+  });
+
   var gems = [{
     name: 'Sapphire',
     price: 35.56,
@@ -31,6 +39,11 @@
       "images/sapphire_big.jpg",
       "images/sapphire_small.jpg"
     ],
+    reviews: [{
+      stars: 5,
+      body: 'Love the color!',
+      author: 'john@lovers.com'
+    }],
     canPurchase: true,
     soldOut: false
     },
@@ -42,6 +55,11 @@
       "images/ruby_big.jpg",
       "images/ruby_small.jpg"
     ],
+    reviews: [{
+      stars: 3,
+      body: 'I like the gemstone but I think it is overpriced!',
+      author: 'joanna@lovers.com'
+    }],
     canPurchase: true,
     soldOut: false
     },
@@ -53,6 +71,16 @@
       "images/jade_big.jpg",
       "images/jade_small.jpg"
     ],
+    reviews: [{
+      stars: 2,
+      body: 'I thought this would be more shiny, just looks like a regular rock..',
+      author: 'jasmine@lovers.com'
+    },
+    {
+      stars: 4,
+      body: 'This is a really lovely stone, the cut could be better',
+      author: 'janine@lovers.com'
+    }],
     canPurchase: true,
     soldOut: false
   }]
