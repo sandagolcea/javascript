@@ -14,8 +14,7 @@
   Filter: <input type="text" ng-model='searchText'>
   <ul ng-repeat="product in store.products | filter:searchText | orderBy:'price'">
     <li ng-hide='product.soldOut'>
-      <h3> {{product.name}} </h3>
-      <em class="pull-right"><h2> {{product.price | currency }} </h2></em>
+      <h3 ng-include="'product-info.html'"></h3>
       <!-- Images -->
       <div class="gallery" ng-show="product.images.length" ng-controller="GalleryController as gallery">
         <img class="big-icon" ng-src="{{product.images[gallery.current]}}"/><br>
@@ -46,23 +45,23 @@
           <blockquote ng-repeat="review in product.reviews">
             <b>stars: {{review.stars}}</b>
             <p>{{review.body}}</p>
-            <cite>author: {{review.author}}</cite>
+            <cite>author: {{review.author}} on {{review.createdOn | date}}</cite>
           </blockquote>
 
           <!-- Review submission form and preview -->
-          <form name="reviewForm" ng-controller='ReviewController as reviewCtrl' ng-submit='reviewCtrl.addReview(product)'>
+          <form name="reviewForm" ng-controller='ReviewController as reviewCtrl' ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)" novalidate>
             <!-- Preview -->
             <blockquote>
               <b  ng-show='reviewCtrl.review.stars'>stars: {{reviewCtrl.review.stars}}</b>
               <p>{{reviewCtrl.review.body}}</p>
-              <cite ng-show='reviewCtrl.review.author'>author: {{reviewCtrl.review.author}}</cite>
+              <cite ng-show='reviewCtrl.review.author'>-{{reviewCtrl.review.author}}</cite>
             </blockquote>
           <!-- Form -->
-            <select ng-model='reviewCtrl.review.stars' ng-options="stars for stars in [5,4,3,2,1]">
+            <select ng-model='reviewCtrl.review.stars' ng-options="stars for stars in [5,4,3,2,1]" required>
               <option value="">Rate the Product</option>
             </select><br>
-            <textarea ng-model='reviewCtrl.review.body' rows="4" placeholder="your review here.."></textarea><br>
-            <input ng-model='reviewCtrl.review.author' type="email" placeholder="john.doe@mail.com"/><br>
+            <textarea ng-model='reviewCtrl.review.body' rows="4" placeholder="your review here.." required></textarea><br>
+            <input ng-model='reviewCtrl.review.author' type="email" placeholder="john.doe@mail.com" required/><br>
             <input type="submit" value="Submit" />
           </form>
           <!-- End of review form -->

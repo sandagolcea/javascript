@@ -30,3 +30,11 @@ ul {
 .gallery {
   text-align: center;
 }
+
+.ng-valid.ng-dirty {
+  border-color: #7889FA;
+}
+
+.ng-invalid.ng-dirty {
+  border-color: #F77;
+}

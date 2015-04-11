@@ -26,6 +26,7 @@
   app.controller('ReviewController', function () {
     this.review = {};
     this.addReview = function (product) {
+      this.review.createdOn = Date.now();
       product.reviews.push(this.review);
       this.review = {};
     };
@@ -42,7 +43,8 @@
     reviews: [{
       stars: 5,
       body: 'Love the color!',
-      author: 'john@lovers.com'
+      author: 'john@lovers.com',
+      createdOn: 1428783193376
     }],
     canPurchase: true,
     soldOut: false
@@ -58,7 +60,8 @@
     reviews: [{
       stars: 3,
       body: 'I like the gemstone but I think it is overpriced!',
-      author: 'joanna@lovers.com'
+      author: 'joanna@lovers.com',
+      createdOn: 1428783193376
     }],
     canPurchase: true,
     soldOut: false
@@ -74,12 +77,14 @@
     reviews: [{
       stars: 2,
       body: 'I thought this would be more shiny, just looks like a regular rock..',
-      author: 'jasmine@lovers.com'
+      author: 'jasmine@lovers.com',
+      createdOn: 1428783193376
     },
     {
       stars: 4,
       body: 'This is a really lovely stone, the cut could be better',
-      author: 'janine@lovers.com'
+      author: 'janine@lovers.com',
+      createdOn: 1428783193376
     }],
     canPurchase: true,
     soldOut: false
