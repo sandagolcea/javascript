@@ -11,65 +11,24 @@
 
 <body ng-controller='StoreController as store'>
   <div class='container'>
-  Filter: <input type="text" ng-model='searchText'>
-  <ul ng-repeat="product in store.products | filter:searchText | orderBy:'price'">
-    <li ng-hide='product.soldOut'>
-      <product-info></product-info>
-      <!-- Images -->
-      <div class="gallery" ng-show="product.images.length" ng-controller="GalleryController as gallery">
-        <img class="big-icon" ng-src="{{product.images[gallery.current]}}"/><br>
-        <ul class="thumbs" ng-repeat="image in product.images">
-          <li><img class="small-icon thumbnail" ng-src="{{image}}"></li>
-        </ul>
-      </div>
-      <!-- Navigation tabs -->
-      <section ng-controller="PanelController as panel">
-        <ul class="nav nav-pills">
-          <li ng-class="{active:panel.isSelected(1)}"><a href ng-click="panel.selectTab(1)">Description</a></li>
-          <li ng-class="{active:panel.isSelected(2)}"><a href ng-click="panel.selectTab(2)">Specifications</a></li>
-          <li ng-class="{active:panel.isSelected(3)}"><a href ng-click="panel.selectTab(3)">Reviews</a></li>
-        </ul>
-        <!-- Description panel -->
-        <div class="panel" ng-show="panel.isSelected(1)">
-          <h4>Description</h4>
-          <p>{{product.description}}</p>
+    Filter: <input type="text" ng-model='searchText'>
+    <ul ng-repeat="product in store.products | filter:searchText | orderBy:'price'">
+      <li ng-hide='product.soldOut'>
+        <product-info></product-info>
+        <!-- Images Gallery-->
+        <div class="gallery" ng-show="product.images.length" ng-controller="GalleryController as gallery">
+          <img class="big-icon" ng-src="{{product.images[gallery.current]}}"/><br>
+          <ul class="thumbs" ng-repeat="image in product.images">
+            <li><img class="small-icon thumbnail" ng-src="{{image}}"></li>
+          </ul>
         </div>
-        <!-- Specifications panel -->
-        <div class="panel" ng-show="panel.isSelected(2)">
-          <h4>Specification</h4>
-          <p>Specification to come soon..</p>
-        </div>
-        <!-- Reviews panel -->
-        <div class="panel" ng-show="panel.isSelected(3)">
-          <h4>Reviews</h4>
-          <blockquote ng-repeat="review in product.reviews">
-            <b>stars: {{review.stars}}</b>
-            <p>{{review.body}}</p>
-            <cite>author: {{review.author}} on {{review.createdOn | date}}</cite>
-          </blockquote>
-
-          <!-- Review submission form and preview -->
-          <form name="reviewForm" ng-controller='ReviewController as reviewCtrl' ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)" novalidate>
-            <!-- Preview -->
-            <blockquote>
-              <b  ng-show='reviewCtrl.review.stars'>stars: {{reviewCtrl.review.stars}}</b>
-              <p>{{reviewCtrl.review.body}}</p>
-              <cite ng-show='reviewCtrl.review.author'>-{{reviewCtrl.review.author}}</cite>
-            </blockquote>
-          <!-- Form -->
-            <select ng-model='reviewCtrl.review.stars' ng-options="stars for stars in [5,4,3,2,1]" required>
-              <option value="">Rate the Product</option>
-            </select><br>
-            <textarea ng-model='reviewCtrl.review.body' rows="4" placeholder="your review here.." required></textarea><br>
-            <input ng-model='reviewCtrl.review.author' type="email" placeholder="john.doe@mail.com" required/><br>
-            <input type="submit" value="Submit" />
-          </form>
-          <!-- End of review form -->
-        </div>
-      </section>
-      <button ng-show='product.canPurchase'>Add to cart</button>
-    </li>
-  </ul>
+        <!-- Navigation tabs -->
+        <product-panels>
+        </product-panels>
+        <!-- Add to cart -->
+        <button ng-show='product.canPurchase'>Add to cart</button>
+      </li>
+    </ul>
   </div>
   <!-- Angular -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>

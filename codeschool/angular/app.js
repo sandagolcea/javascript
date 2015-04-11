@@ -6,16 +6,6 @@
     this.products = gems;
   });
 
-  app.controller('PanelController', function () {
-    this.tab = 1;
-    this.selectTab = function(tabNr){
-      this.tab = tabNr;
-    };
-    this.isSelected = function(tabNr){
-      return this.tab === tabNr;
-    };
-  });
-
   app.controller('GalleryController', function () {
     this.current = 0;
     this.setCurrent = function(value){
@@ -38,6 +28,24 @@
       templateUrl: 'product-info.html'
     };
   });
+
+  app.directive('productPanels', function(){
+    return {
+      restrict: 'E',
+      templateUrl: 'product-panels.html',
+      controller: function () {
+        this.tab = 1;
+        this.selectTab = function(tabNr){
+          this.tab = tabNr;
+        };
+        this.isSelected = function(tabNr){
+          return this.tab === tabNr;
+        };
+      },
+      controllerAs: 'panel'
+    }
+  });
+
   var gems = [{
     name: 'Sapphire',
     price: 35.56,
