@@ -32,6 +32,12 @@
     };
   });
 
+  app.directive('productInfo', function(){
+    return {
+      restrict: 'E',
+      templateUrl: 'product-info.html'
+    };
+  });
   var gems = [{
     name: 'Sapphire',
     price: 35.56,

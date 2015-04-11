@@ -14,7 +14,7 @@
   Filter: <input type="text" ng-model='searchText'>
   <ul ng-repeat="product in store.products | filter:searchText | orderBy:'price'">
     <li ng-hide='product.soldOut'>
-      <h3 ng-include="'product-info.html'"></h3>
+      <product-info></product-info>
       <!-- Images -->
       <div class="gallery" ng-show="product.images.length" ng-controller="GalleryController as gallery">
         <img class="big-icon" ng-src="{{product.images[gallery.current]}}"/><br>
