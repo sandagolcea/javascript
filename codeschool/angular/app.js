@@ -22,14 +22,14 @@
     };
   });
 
-  app.directive('productInfo', function(){
+  app.directive('productInfo', function () {
     return {
       restrict: 'E',
       templateUrl: 'product-info.html'
     };
   });
 
-  app.directive('productPanels', function(){
+  app.directive('productPanels', function () {
     return {
       restrict: 'E',
       templateUrl: 'product-panels.html',
@@ -44,6 +44,20 @@
       },
       controllerAs: 'panel'
     }
+  });
+
+  app.directive('productGallery', function () {
+    return {
+      restrict: 'E',
+      templateUrl: 'product-gallery.html',
+      controller: function () {
+        this.current = 0;
+        this.setCurrent = function(imageNumber){
+          this.current = imageNumber || 0;
+        };
+      },
+      controllerAs: 'gallery'
+    };
   });
 
   var gems = [{

@@ -16,12 +16,7 @@
       <li ng-hide='product.soldOut'>
         <product-info></product-info>
         <!-- Images Gallery-->
-        <div class="gallery" ng-show="product.images.length" ng-controller="GalleryController as gallery">
-          <img class="big-icon" ng-src="{{product.images[gallery.current]}}"/><br>
-          <ul class="thumbs" ng-repeat="image in product.images">
-            <li><img class="small-icon thumbnail" ng-src="{{image}}"></li>
-          </ul>
-        </div>
+        <product-gallery></product-gallery>
         <!-- Navigation tabs -->
         <product-panels>
         </product-panels>

@@ -1,0 +1,6 @@
+<div class="gallery" ng-show="product.images.length">
+  <img class="big-icon" ng-src="{{product.images[gallery.current]}}"/><br>
+  <ul class="thumbs" ng-repeat="image in product.images">
+    <li><img class="small-icon thumbnail" ng-src="{{image}}"></li>
+  </ul>
+</div>
