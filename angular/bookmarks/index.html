@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bookmarks</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-app='bookMark' ng-controller='MainController'>
+  {{test}}
+  <div ng-repeat="link in links | orderBy: '-likes'">
+    {{link.title}} - likes: {{link.likes}}
+  </div>
+  <form ng-submit="addLink()">
+    <input type="text" ng-model="title"></input>
+    <button type="submit">Link</button>
+  </form>
+</body>
+</html>
