@@ -1,0 +1,43 @@
+h1 {
+  color: black !important
+}
+
+.logo {
+    background: url('http://developer.hawkface.com/test-logo.png') no-repeat 0 0;
+    display: block;
+    height: 72px;
+    width: 260px;
+    float: left;
+    transition: background-position 0.3s ease 0.01s;
+}
+
+header nav {
+  float: left !important
+}
+
+.header-shrink a.logo:hover {
+    background-position: 0 -53pt;
+    transform: rotate(360deg);
+    transition-duration: 0.8s;
+    transition-property: transform;
+}
+
+.header-shrink .logo {
+    background: url('http://hawkface.com/developer/test-logo.png') no-repeat 0 -53pt;
+    width: 70px;
+    transition: background-position 0.2s ease 0.0s;
+}
+
+#content {
+  background: #eee;
+  width: 540px;
+  margin: 0 auto;
+  padding: 130px 40px 0
+}
+
+@media screen and (max-width: 73.5em) {
+  #content {
+      font-size: 100%;
+  }
+  
+}
