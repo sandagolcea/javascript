@@ -21,6 +21,13 @@
           <app-info info="app"></app-info>
           <install-app></install-app>
         </div>
+        <div class="weather" ng-repeat="day in fiveDay.days">
+          <p>
+          <img ng-src="{{day.icon}}"/>
+          {{day.datetime | date}} - 
+          Day high: {{day.high}} - 
+          Day low: {{day.low}}</p>
+        </div>
       </div>
     </div>
 
@@ -33,6 +40,8 @@
     <!-- Directives -->
     <script src="js/directives/appInfo.js"></script>
     <script src="js/directives/installApp.js"></script>
-
+    
+    <!-- Services -->
+    <script src="js/services/forecast.js"></script>
   </body>
 </html>

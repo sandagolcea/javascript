@@ -127,3 +127,7 @@ body {
  background-color: #ababab ;
  color: #3f3f3f ;
 }
+
+.weather img {
+ width: 48px;
+}
