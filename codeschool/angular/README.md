@@ -10,4 +10,4 @@ A static node server is used for serving ng-include files
 * goto localhost:3000  
 
 ##Screenshot
-![Alt text](/gemstore.png?raw=true "Angular Gemstore")
+![Angular Gemstore](/codeschool/gemstore.png?raw=true "Angular Gemstore")
