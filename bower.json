@@ -1,0 +1,23 @@
+{
+  "name": "angular-githubAPI",
+  "version": "0.0.0",
+  "homepage": "https://github.com/matteomanzo/Angular-GitHubAPI-search",
+  "authors": [
+    "Matteo Manzo <imatteo.manzo@gmail.com>"
+  ],
+  "description": "seraching github users through the api in an angular app",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "bootstrap": "~3.3.4",
+    "angular": "~1.3.15",
+    "angular-resource": "~1.3.15"
+  }
+}
