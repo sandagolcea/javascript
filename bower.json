@@ -5,7 +5,6 @@
   "authors": [
     "Matteo Manzo <imatteo.manzo@gmail.com>"
   ],
-  "description": "seraching github users through the api in an angular app",
   "license": "MIT",
   "ignore": [
     "**/.*",
