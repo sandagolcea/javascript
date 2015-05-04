@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app='todo' lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Angular TODO list</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body ng-controller='TodoController'>
+  <!-- Top box -->
+  <div class='top-box'>
+    <p>Hola!</p>
+    <form ng-submit='addTask()' name='newTodoForm'>
+      <input type="text" ng-model="newTask.description" required>
+      <input type="hidden" ng-model="newTask.done=false">
+      <button ng-disabled="newTodoForm.$invalid">Add</button>
+    </form>
+    <p>
+    <input type="text" ng-model="searchText">
+    <button>Search</button>
+    </p>
+  </div>
+  <!-- 2nd row left column -->
+  <div class='left-box'>
+    <form ng-repeat='task in tasks | filter: searchText' ng-submit='removeTask(task)'>
+      <p>
+        {{task.description}} - {{task.done}}
+        <button >Done</button>
+      </p>
+    </form>
+  </div>
+  <!-- 2nd row right column -->
+  <div class="right-box">
+    <form ng-repeat='task in tasks' ng-show='task.done' ng-submit='resetTask(task)'>
+      <p>
+        {{task.description}}
+        <button >Undone</button>
+      </p>
+    </form>
+  </div>
+  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js'></script>
+  <script src='todo.js'></script>
+</body>
+</html>

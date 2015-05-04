@@ -5,3 +5,4 @@ twitter_not_working
 /data/db/*
 .DS_Store
 .meteor
+bower_components
